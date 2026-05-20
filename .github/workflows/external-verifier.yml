@@ -1,0 +1,38 @@
+name: Master Prime External Verifier
+
+on:
+  workflow_dispatch:
+    inputs:
+      independent:
+        description: "Mark this run as independent from builder"
+        required: true
+        default: "false"
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      actions: read
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Show environment
+        run: |
+          python --version
+          uname -a
+
+      - name: Run CI verifier
+        run: |
+          if [ "${{ github.event.inputs.independent }}" = "true" ]; then
+            python tools/ci_verifier.py --package-root . --out-dir ci_verifier_output --reviewer-name "${{ github.actor }}" --independent
+          else
+            python tools/ci_verifier.py --package-root . --out-dir ci_verifier_output --reviewer-name "${{ github.actor }}"
+          fi
+
+      - name: Upload verifier evidence
+        uses: actions/upload-artifact@v4
+        with:
+          name: master-prime-verifier-evidence
+          path: ci_verifier_output/
