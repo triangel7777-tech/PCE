@@ -1,0 +1,21 @@
+{
+  "run_id": "external-run-capture-template",
+  "created_utc": "2026-05-20T13:36:58.421044+00:00",
+  "repository": "FILL_ME",
+  "workflow_name": "Master Prime External Verifier",
+  "workflow_url": "FILL_ME",
+  "commit_sha": "FILL_ME",
+  "actor": "FILL_ME",
+  "independent": false,
+  "artifact_names": [
+    "master-prime-verifier-evidence"
+  ],
+  "verification_summary": {
+    "signature_verified": false,
+    "ledger_verified": false,
+    "checksums_verified": false,
+    "runtime_smoke_verified": false
+  },
+  "promotion_recommendation": "HOLD_AT_LEVEL_4",
+  "boundary": "Template only until completed from a real external run."
+}
