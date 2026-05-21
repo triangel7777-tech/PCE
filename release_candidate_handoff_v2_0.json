@@ -1,0 +1,21 @@
+{
+  "handoff_id": "master-prime-v2-0-release-candidate-handoff",
+  "created_utc": "2026-05-20T13:36:58.421044+00:00",
+  "release_name": "Master Prime Fusion Control Panel v2.0",
+  "repo_layout": [
+    "release_candidate_repo/README.md",
+    "release_candidate_repo/.github/workflows/external-verifier.yml",
+    "release_candidate_repo/tools/ci_verifier.py",
+    "release_candidate_repo/external_verifier_mini_bundle/verify_package.py"
+  ],
+  "external_run_capture_packet": "external_run_capture_packet/github_external_run_record.json",
+  "checklist": [
+    "Copy release_candidate_repo contents to GitHub.",
+    "Run external verifier workflow.",
+    "Download verifier evidence artifact.",
+    "Fill external run capture packet.",
+    "Import completed verifier report.",
+    "Keep Level 6 blocked until genuine independent evidence is reviewed."
+  ],
+  "boundary": "Release-candidate handoff only. Not external proof."
+}
