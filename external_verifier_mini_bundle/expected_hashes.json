@@ -1,0 +1,27 @@
+{
+  "bundle_name": "release_candidate_repo_v2_0",
+  "created_utc": "2026-05-20T13:36:58.421044+00:00",
+  "target_files": [
+    {
+      "path": "README.md",
+      "sha256": "97839cb6eb38ee643c6fcfdffe4d30563c5082bd4645f0106fe373715e8c7224",
+      "bytes": 395
+    },
+    {
+      "path": ".github/workflows/external-verifier.yml",
+      "sha256": "6da9bb0797b1dca46fb306e0cc8d2954d5574d9e8608dc00b931890e018c74c1",
+      "bytes": 1057
+    },
+    {
+      "path": "tools/ci_verifier.py",
+      "sha256": "19aa33053c77be0f8f59a88a1539f634b58670f3df58ac7ca5f79c1d62604287",
+      "bytes": 3967
+    },
+    {
+      "path": "external_verifier_mini_bundle/verify_package.py",
+      "sha256": "98be22dfe86b7ce4b3a4f476e74d90a473d829c2efdc67153262bb2afb90063d",
+      "bytes": 493
+    }
+  ],
+  "boundary": "Expected hashes for release-candidate repo scaffold."
+}
